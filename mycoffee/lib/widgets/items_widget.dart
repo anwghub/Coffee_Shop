@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:mycoffee/screens/single_item_screen.dart';
 
 // ignore: must_be_immutable
 class ItemsWidget extends StatelessWidget {
@@ -30,6 +31,12 @@ class ItemsWidget extends StatelessWidget {
             child: Column(
               children: [
                 InkWell(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SingleItemScreen(img[i])));
+                  },
                   child: Container(
                     margin: EdgeInsets.all(10),
                     child: Image.asset(
@@ -47,7 +54,7 @@ class ItemsWidget extends StatelessWidget {
                     children: [
                       Text(
                         img[i],
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -89,7 +96,8 @@ class ItemsWidget extends StatelessWidget {
                           size: 20,
                         ),
                       ),
-                    ],),
+                    ],
+                  ),
                 )
               ],
             ),
