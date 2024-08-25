@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen>
                       child: Icon(
                         Icons.sort_rounded,
                         color: Colors.white.withOpacity(0.5),
-                        size: 35,
+                        size: 30,
                       ),
                     ),
                     InkWell(
@@ -56,26 +56,28 @@ class _HomeScreenState extends State<HomeScreen>
                       child: Icon(
                         Icons.notifications,
                         color: Colors.white.withOpacity(0.5),
-                        size: 35,
+                        size: 30,
                       ),
                     ),
                   ],
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15),
+                padding: EdgeInsets.symmetric(horizontal: 20),
+
                 child: Text(
                   "It's a great day for Coffee",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 25,
+                    fontSize: 20,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
+              SizedBox(height: 15),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 15),
-                height: 60,
+                margin: EdgeInsets.symmetric(horizontal: 20),
+                height: 45,
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   color: Color.fromARGB(255, 50, 54, 56),
@@ -96,6 +98,7 @@ class _HomeScreenState extends State<HomeScreen>
                   ),
                 ),
               ),
+              SizedBox(height: 20),
               TabBar(
                   controller: _tabController,
                   labelColor: Color(0xFFE57734),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mycoffee/screens/home_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -9,12 +9,13 @@ class WelcomeScreen extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.only(top: 100, bottom: 40),
         decoration: const BoxDecoration(
-            color: Colors.black,
-            image: DecorationImage(
-              image: AssetImage("images/bg.png"),
-              fit: BoxFit.cover,
-              opacity: 0.6,
-            )),
+          color: Colors.black,
+          image: DecorationImage(
+            image: AssetImage("images/bg.png"),
+            fit: BoxFit.cover,
+            opacity: 0.6,
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -24,8 +25,9 @@ class WelcomeScreen extends StatelessWidget {
             ),
             Column(
               children: [
+                SizedBox(height: 40),
                 Text(
-                  "Feeling low?Take a sip of Coffee",
+                  "Feeling low? Take a sip of Coffee",
                   style: TextStyle(
                     color: Colors.white.withOpacity(0.8),
                     fontSize: 18,
@@ -36,19 +38,19 @@ class WelcomeScreen extends StatelessWidget {
                 SizedBox(height: 80),
                 Material(
                   color: Color(0xFFE57734),
-                  borderRadius: BorderRadiusDirectional.circular(10),
+                  borderRadius: BorderRadius.circular(10),
                   child: InkWell(
                     onTap: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => HomeScreen(),
-                          ));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomeScreen(),
+                        ),
+                      );
                     },
                     splashColor: Colors.black,
                     child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 13, horizontal: 50),
+                      padding: EdgeInsets.symmetric(vertical: 13, horizontal: 50),
                       decoration: BoxDecoration(
                         color: Color(0xFFE57734),
                         borderRadius: BorderRadius.circular(10),
@@ -64,16 +66,12 @@ class WelcomeScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                )
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),
     );
   }
-}
-
-class GoogleFonts {
-  static pacifico({required int fontSize, required Color color}) {}
 }

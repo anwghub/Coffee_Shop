@@ -12,7 +12,7 @@ class ItemsWidget extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       shrinkWrap: true,
       crossAxisCount: 2,
-      childAspectRatio: (150 / 195),
+      childAspectRatio: (150 / 185),
       children: [
         for (int i = 0; i < img.length; i++)
           Container(
@@ -77,7 +77,7 @@ class ItemsWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "\$30",
+                        "\$10",
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 18,
